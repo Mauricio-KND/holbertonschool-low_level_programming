@@ -1,22 +1,36 @@
 #include "holberton.h"
-
 /**
- * print_triangle - print triangle of variable length
- * @size: triangle height
+ * print_triangle - function that prints a piramid
+ * @size: type int
+ * Return: void
  */
 void print_triangle(int size)
 {
-int i, m;
+int i;
+int j;
+int limit = size;
 
-m = size;
-
-if (size <= 0)
-_putchar('\n');
-while (size > 0)
+if (size > 0)
 {
-for (i = 0; i < m; i++)
-_putchar((i < size - 1) ? '.' : '#');
+for (i = 0; i < size; i++)
+{
+limit--;
+for (j = 0; j < size; j++)
+{
+if (j < limit)
+{
+_putchar(32);
+}
+else
+{
+_putchar(35);
+}
+}
 _putchar('\n');
-size--;
+}
+}
+else
+{
+_putchar('\n');
 }
 }
