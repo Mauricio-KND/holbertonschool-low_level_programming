@@ -1,30 +1,24 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * leet - Turn aeotl into 43071 respectively.
- * @s: String to replace from.
+ * leet - encodes a string into 1337
+ * @s: string to encode
  *
- * Description: Don't hate the hacker, hate the code :)
- *
- * Return: Pointer to changed string
+ * Return: address of s
  */
-
 char *leet(char *s)
 {
-	char *temp;
+	int i, j;
+	char a[] = "aAeEoOtTlL";
+	char b[] = "4433007711";
 
-	temp  = s;
-
-	while (*s)
+	for (i = 0; *(s + i); i++)
 	{
-		(*s == 'a' || *s == 'A') ? *s = '4' : 0;
-		(*s == 'e' || *s == 'E') ? *s = '3' : 0;
-		(*s == 'o' || *s == 'O') ? *s = '0' : 0;
-		(*s == 't' || *s == 'T') ? *s = '7' : 0;
-		if (*s == 'l' || *s == 'L')
-			(*s) = '1';
-		s++;
+		for (j = 0; j <= 9; j++)
+		{
+			if (a[j] == *(s + i))
+				*(s + i) = b[j];
+		}
 	}
-
-	return (temp);
+	return (s);
 }
