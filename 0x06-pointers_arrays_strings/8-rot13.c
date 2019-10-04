@@ -1,40 +1,27 @@
 #include "holberton.h"
 
 /**
- * _ischar - returns if letter
- * @c: char to check
- *
- * Return: 1 if letter, else 0
- */
-
-int _ischar(char c)
-{
-	int flag;
-
-	flag = 0;
-	((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) ? flag = 1 : 0;
-	return (flag);
-}
-
-
-/**
- * rot13 - encode a string with rot13
+ * rot13 - encodes a string into rot13
  * @s: string to encode
  *
- * Return: pointer to string
+ * Return: address of s
  */
-
 char *rot13(char *s)
 {
-	char *tmp;
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	tmp = s;
-	do {
-		if (_ischar(*s))
+	for (i = 0; *(s + i); i++)
+	{
+		for (j = 0; j < 52; j++)
 		{
-			((*s >= 'a' && *s <= 'm') ||
-			 (*s >= 'A' && *s <= 'M')) ? (*s = *s + 13) : (*s = *s - 13);
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
 		}
-	} while (*s++);
-	return (tmp);
+	}
+	return (s);
 }
