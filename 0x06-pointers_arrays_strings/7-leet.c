@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * leet - turn aeotl into 43071 respectively
- * @s: string to replace from
+ * leet - Turn aeotl into 43071 respectively.
+ * @s: String to replace from.
  *
  * Description: Don't hate the hacker, hate the code :)
  *
