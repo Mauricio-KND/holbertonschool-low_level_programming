@@ -3,7 +3,7 @@
 #define __FILE__
 #endif
 /**
- *main - Prints the name of the file it was compiled from, followed by new line.
+ *main - Prints the name of the file it was compiled from, followed new line.
  *Return: 0.
  */
 int main(void)
