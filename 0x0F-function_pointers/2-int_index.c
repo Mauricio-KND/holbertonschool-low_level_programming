@@ -4,7 +4,7 @@
  *int_index - Searches for an integer.
  *@array: Array of integers to search in.
  *@size: Number of elements inside the array.
- *@comp: Used to compare values.
+ *@cmp: Used to compare values.
  *Return: An integer.
  */
 int int_index(int *array, int size, int (*cmp)(int))
