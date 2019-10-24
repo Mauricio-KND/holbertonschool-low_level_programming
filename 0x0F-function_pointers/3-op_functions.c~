@@ -1,0 +1,10 @@
+/**
+ *op_add - Sum of a and b.
+ *@a: Integer.
+ *@b: Integer.
+ *Return: The sum of a and b.
+ */
+int op_add(int a, int b)
+{
+	return (a + b);
+}
