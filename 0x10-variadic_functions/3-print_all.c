@@ -29,9 +29,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[a] == *print_type[b].op)
 			{
-				printf("%s",c);
+				printf("%s", c);
 				print_type[b].f(mylist);
-				c =", ";
+				c = ", ";
 			}
 			b++;
 		}
