@@ -1,5 +1,9 @@
 #include "lists.h"
 /**
+ *add_node_end - Adds a new node at the end of a list_t list.
+ *@head: Head of the list.
+ *@str: String to range.
+ *Return: The address of the new element. NULL if failed.
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
