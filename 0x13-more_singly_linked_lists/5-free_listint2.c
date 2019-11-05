@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  *free_listint2 - Frees a listint_t list.
- *@head:
+ *@head:Head of node.
  *Return: Void. Nothing.
  */
 
