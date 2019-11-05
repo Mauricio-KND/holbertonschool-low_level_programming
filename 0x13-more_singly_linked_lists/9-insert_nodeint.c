@@ -1,44 +1,42 @@
 #include "lists.h"
-
 /**
- * insert_nodeint_at_index - inserts a node to a given position in a listint_t
- *
- * @head: head for listint_t struct
- * @index: index to add node at
- * @n: value to add to new node
- * Return: returns new node address, or NULL on failure
+ * insert_nodeint_at_index - Inserts a new node at a given position.
+ * @head: Head of node.
+ * @index: Index of list.
+ * @n: Siz of list.
+ * Return: The address of new node. NULL if it failed.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 {
-	unsigned int i;
-	listint_t *walk, *new;
+	unsigned int a;
+	listint_t *szflst,/*Size of list*/ *nwnd;/*New node.*/
 
-	if (*head == NULL && index != 0)
+	if (*head == NULL && index != 0)/*If fails. NULL.*/
+		return (NULL);/*If its not possible add node at index. NULL.*/
+	szflst = *head;
+	nwnd = malloc(sizeof(listint_t));
+	if (nwnd == NULL)
 		return (NULL);
-	walk = *head;
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
+	nwnd->n = n;
 	if (index == 0)
 	{
-		new->next = *head;
-		*head = new;
-		return (new);
+		nwnd->next = *head;
+		*head = nwnd;
+		return (nwnd);
 	}
-	walk = *head;
-	i = 0;
-	while (i < index - 1)
+	szflst = *head;
+	a = 0;
+	while (a < index - 1)
 	{
-		walk = walk->next;
-		if (walk == NULL)
+		szflst = szflst->next;
+		if (szflst == NULL)
 		{
-			free(new);
+			free(nwnd);
 			return (NULL);
 		}
-		i++;
+		a++;
 	}
-	new->next = walk->next;
-	walk->next = new;
-	return (new);
+	nwnd->next = szflst->next;
+	szflst->next = nwnd;
+	return (nwnd);
 }
