@@ -7,12 +7,12 @@
 
 void free_listint2(listint_t **head)
 {
-	if (head == NULL)
+	if (head == NULL)/*If head NULL do nothing*/
 		return;
 	while (*head)
 	{
 		free(*head);
 		*head = (*head)->next;
 	}
-	head = NULL;
+	head = NULL;/*Setting head to NULL*/
 }
