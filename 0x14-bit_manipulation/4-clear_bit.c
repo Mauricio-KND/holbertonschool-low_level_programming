@@ -9,9 +9,9 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int sz;/*Size of binary number*/
 
-	sz = sizeof(*n) * 8 - 1;
-	if (index > sz)
+	sz = sizeof(*n)/*Value inside pointer*/ * 8 - 1;
+	if (index > sz)/*If fails*/
 		return (-1);
-	*n = ~(1 << index) & *n;
+	*n = ~(1 << index)/*Clean the bit*/ & *n;
 	return (1);
 }

@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 	int ndx;/*Index.*/
 
 	if (b == NULL)
-		return (0);
+		return (0);/*If fail return 0*/
 	for (ndx = 0; b[ndx] != '\0'; ndx++)
 	{
 		if (b[ndx] != '0' && b[ndx] != '1')
