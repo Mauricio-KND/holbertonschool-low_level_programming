@@ -8,11 +8,11 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int cntr = 0;/*Counter*/
-	unsigned long int flp = n ^ m;/*Flipper*/
+	unsigned long int flp = n ^ m;/*XOR Flipper*/
 
 	while (flp)/*Different of zero*/
 	{
-		cntr += (flp & 1);/*And of 1*/
+		cntr += (flp & 1);/*Clean the bit*/
 		flp >>= 1;
 	}
 
