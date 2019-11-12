@@ -15,12 +15,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)/*Guard case*/
 		return (0);
 	file = open(filename, O_RDWR);
-	if (file == -1)
+	if (file == -1)/*Guard Case*/
 		return (0);
 	READVAL = read(file, &buff, 1);
-	if (READVAL == -1)
+	if (READVAL == -1)/*Guard Case*/
 		return (0);
-	for (a = 0; READVAL != 0 && a != letters; a++)
+	for (a = 0; READVAL != 0 && a != letters; a++)/*Counting Letters*/
 	{
 		RETVAL = write(STDOUT_FILENO, &buff, 1);
 		if (RETVAL == -1)
