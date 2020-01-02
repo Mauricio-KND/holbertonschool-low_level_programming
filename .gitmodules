@@ -1,0 +1,6 @@
+[submodule "monty"]
+	path = monty
+	url = git@github.com:Mauricio-KND/monty.git
+[submodule "0x19-stacks_queues_lifo_fifo"]
+	path = 0x19-stacks_queues_lifo_fifo
+	url = git@github.com:Mauricio-KND/monty.git
