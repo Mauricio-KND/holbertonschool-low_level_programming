@@ -1,23 +1,27 @@
-#include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-
+#include <time.h>
+#include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ *main - Assign a random number to the variable n each time it is executed.
+ *Return: An integer.
  */
 int main(void)
 {
-int n;
-int t;
-char *greaterfive = "and is greater than 5\n";
-char *lesssix = "and is less than 6 and not 0\n";
-char *zero = "and is 0\n";
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-t = n % 10;
-printf("Last digit of %d is %d ", n, t);
-printf("%s", t == 0 ? zero : t > 5 ? greaterfive : lesssix);
-return (0);
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n % 10 > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
+	}
+	else if (n % 10 == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, n % 10);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
+	}
+	return (0);
 }
