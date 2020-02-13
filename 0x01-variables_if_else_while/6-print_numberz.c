@@ -1,19 +1,17 @@
 #include <stdio.h>
 /**
- *main - Entry point
- *
- *Description: Program prints the single digit numbers in base 10 without using
- *chars
- *Return: 0 upon successful completion
+ *main - Prints all digits base 10 from 0, followed by a new line.
+ *Return: An integer.
  */
 int main(void)
 {
-int num = '0';
-while (num <= '9')
-{
-putchar(num);
-num++;
-}
-putchar('\n');
-return (0);
+	int i = '0';
+
+	while (i <= '9')
+	{
+		putchar(i);
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
