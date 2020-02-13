@@ -1,25 +1,23 @@
 #include <stdio.h>
 /**
- *main - Entry point
- *
- *Description: Prints lower case characters followed by uppercase
- *letter.
- *Return: 0 when run to successful completion
+ *main - Prints alphabet in lowercase. Then uppercase, followed by new line.
+ *Return: An integer.
  */
 int main(void)
 {
-char letter = 'a';
-while (letter <= 'z')
-{
-putchar(letter);
-letter++;
-}
-letter = 'A';
-while (letter <= 'Z')
-{
-putchar(letter);
-letter++;
-}
-putchar('\n');
-return (0);
+	char c = 'a';
+
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
+	c = 'A';
+	while (c <= 'Z')
+	{
+		putchar(c);
+		c++;
+	}
+	putchar('\n');
+	return (0);
 }
