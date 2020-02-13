@@ -10,7 +10,7 @@ int main(void)
 	/* Numbers from 0 to 9. */
 	for (i = 0; i < 10; i++)
 	{
-		/*Print the digit. */
+		/*Print digit can be done by using ASCII value of ‘0’. */
 		putchar(i + '0');
 	}
 	/*Letters from a to f. */
