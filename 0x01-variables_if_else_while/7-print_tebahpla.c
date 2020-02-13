@@ -1,18 +1,17 @@
 #include <stdio.h>
 /**
- *main - Entry point
- *
- *Description: This program prints the letters in reverse order
- *Return: 0 upon successful completion
+ *main - Prints lowercase alphabet in reverse. Followed by a new line.
+ *Return: An integer.
  */
 int main(void)
 {
-char letter = 'z';
-while (letter >= 'a')
-{
-putchar(letter);
-letter--;
-}
-putchar('\n');
-return (0);
+	char c = 'z';
+
+	while (c >= 'a')
+	{
+		putchar(c);
+		c--;
+	}
+	putchar('\n');
+	return (0);
 }
