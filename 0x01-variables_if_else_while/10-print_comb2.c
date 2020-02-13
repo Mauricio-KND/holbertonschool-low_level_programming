@@ -1,25 +1,26 @@
 #include <stdio.h>
 /**
- *main - Entry point
- *
- *Description: Program will print numbers from 00 to 99 in ascending order
- *as a comma separated list using NO char data types.
- *Return: 0 when successfully run to completion
+ *main - Prints the numbers from 00 to 99.
+ *Return: An integer.
  */
 int main(void)
 {
-int num = 0;
-while (num < 100)
-{
-putchar((num / 10) + '0');
-putchar((num % 10) + '0');
-if (num != 99)
-{
-putchar(',');
-putchar(' ');
-}
-num++;
-}
-putchar('\n');
-return (0);
+	int i = 0;
+
+	while (i < 100)
+	{
+		/*Prints digit's first number. */
+		putchar((i / 10) + '0');
+		/*Prints digit's last number. */
+		putchar((i % 10) + '0');
+		if (i < 99)
+		{
+			/*Prints comma and space until 99. */
+			putchar(',');
+			putchar(' ');
+		}
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
