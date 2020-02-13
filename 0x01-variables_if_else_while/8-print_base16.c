@@ -5,17 +5,19 @@
  */
 int main(void)
 {
-	int i = "0";
+	int i;
 	char c;
-
-	while (i = 0; i < 10; i++)
+	/* Numbers from 0 to 9. */
+	for (i = 0; i < 10; i++)
 	{
-		putchar(i);
+		putchar(i + '0');
 	}
-	for (c = "a"; c < "g"; c++)
+	/*Letters from a to f. */
+	for (c = 'a'; c < 'g'; c++)
 	{
 		putchar(c);
 	}
 	putchar('\n');
+
 	return (0);
 }
