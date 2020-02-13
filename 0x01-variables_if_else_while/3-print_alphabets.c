@@ -6,7 +6,7 @@
 int main(void)
 {
 	char c = 'a';
-
+	/* Starts from a until z. */
 	while (c <= 'z')
 	{
 		putchar(c);
