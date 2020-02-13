@@ -1,24 +1,26 @@
 #include <stdio.h>
 /**
- *main - Entry point
- *
- *Description: This program will print all letters in lowercase except for
- *q and e.
- *Return: 0 upon successful completion
+ *main - Prints the alphabet in lowercase, followed by new line.
+ *Return: An integer.
  */
 int main(void)
 {
-char letter = 'a';
-while (letter <= 'z')
-{
-if (letter == 'e' || letter == 'q')
-	letter++;
-else
-{
-putchar(letter);
-letter++;
-}
-}
-putchar('\n');
-return (0);
+	char c = 'a';
+
+	while (c <= 'z')
+	{
+		/* Make the jump. */
+		if (c == 'e' || c == 'q')
+			c++;
+		/* Print and continue. */
+		else
+		{
+			putchar(c);
+			c++;
+		}
+	}
+	/* At the end, the new line. */
+	putchar('\n');
+	/* Return the integer to the function. */
+	return (0);
 }
