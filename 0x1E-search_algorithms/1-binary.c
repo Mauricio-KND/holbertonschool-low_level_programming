@@ -8,23 +8,23 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t i, j, low = 0, high = size - 1;
+	size_t i, j, Low = 0, High = size - 1;
 
 	if (!array)
 		return (-1);
-	while (low <= high)
+	while (Low <= High)
 	{
 		printf("Searching in array: ");
-		for (i = low; i < high; i++)
+		for (i = Low; i < High; i++)
 			printf("%i, ", array[i]);
 		printf("%i\n", array[i]);
-		j = (low + high) / 2;
+		j = (Low + High) / 2;
 		if (array[j] == value)
 			return ((int)j);
 		else if (array[j] > value)
-			high = j - 1;
+			High = j - 1;
 		else
-			low = j + 1;
+			Low = j + 1;
 	}
 	return (-1);
 }
